@@ -1,0 +1,16 @@
+
+
+
+新建状态（NEW)                ---->          创建线程对象
+就绪状态（RUNNABLE)           ---->          start方法
+运行状态（RUNNING)            ---->          获取到CPU，执行命令
+阻塞状态（BLOCKED)            ---->          无法获得锁对象
+等待状态（WAITING)            ---->          wait方法
+计时等待状态（TIMED_WAITING)   ---->          sleep方法
+结束状态（TERMINATED)         ---->          全部代码运行完毕
+
+
+阻塞状态和等待状态的区别：
+    实际上不用可以区分两者, 因为两者都会暂停线程的执行.
+    两者的区别是: 进入waiting状态是线程主动的, 而进入blocked状态是被动的.
+    更进一步的说, 进入blocked状态是在同步(synchronized代码之外), 而进入waiting状态是在同步代码之内.
