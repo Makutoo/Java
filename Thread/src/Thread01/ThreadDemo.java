@@ -1,5 +1,7 @@
 package Thread01;
 
+import java.util.List;
+
 public class ThreadDemo {
     /*
     *  String getName()                  返回此线程的名称 (如果没有给线程设置名字，线程也有默认名字 格式：Thread-X (X序号，从0开始))
@@ -10,6 +12,7 @@ public class ThreadDemo {
 
     public static void main(String[] args) throws InterruptedException {
         // 1. 创建线程的对象
+
         MyThread t1 = new MyThread("abc"); //使用构造方法设置名字
         MyThread t2 = new MyThread();
 
