@@ -3,7 +3,7 @@ package ThreadLocal;
 public class Main {
 
     /*
-    * ThreadLocal实际上是每一个thread都有一个自己的内部类map对象
+    * ThreadLocal实际上是每一个thread都有一个自己的内部类map对象，用于解决多线程环境下数据隔离的需求
     * 当我们调用set方式时候，它就会去找当前thread的map对象，并且把数据存到map对象中
     * 因为在SpringMVC中是用线程池来管理thread的，也就是同一个thread在处理完A请求之后会去处理B请求，为了避免被前世的记忆干扰今生的行为，
     * 所以在每次使用完 ThreadLocal 存储的数据后，最好显式地调用 remove 方法来清理数据，以防止数据在线程结束后仍然存在
